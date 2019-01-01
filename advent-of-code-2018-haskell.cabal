@@ -1,0 +1,71 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.31.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: a000834da80b69fb91bba9b842be12a37842ed044eb4848a7092c22bfa160848
+
+name:           advent-of-code-2018-haskell
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/cole-k/advent-of-code-2018-haskell#readme>
+homepage:       https://github.com/cole-k/advent-of-code-2018-haskell#readme
+bug-reports:    https://github.com/cole-k/advent-of-code-2018-haskell/issues
+author:         Cole
+maintainer:     example@example.com
+copyright:      2018 Cole K
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/cole-k/advent-of-code-2018-haskell
+
+library
+  exposed-modules:
+      Day1
+    , Day2
+    , Day3
+    , Day5
+  other-modules:
+      Paths_haskell_aoc
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+    , containers
+    , unordered-containers
+    , megaparsec
+    , void
+  default-language: Haskell2010
+
+executable advent-of-code-2018-haskell
+  main-is: Main.hs
+  other-modules:
+      Paths_haskell_aoc
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , advent-of-code-2018-haskell
+    , argparser
+    , unordered-containers
+  default-language: Haskell2010
+
+test-suite advent-of-code-2018-haskell-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_haskell_aoc
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , advent-of-code-2018-haskell
+  default-language: Haskell2010
