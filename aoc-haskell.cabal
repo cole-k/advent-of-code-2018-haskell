@@ -6,7 +6,7 @@ cabal-version: 1.12
 --
 -- hash: a000834da80b69fb91bba9b842be12a37842ed044eb4848a7092c22bfa160848
 
-name:           advent-of-code-2018-haskell
+name:           aoc-haskell
 version:        0.1.0.0
 description:    Please see the README on GitHub at <https://github.com/cole-k/advent-of-code-2018-haskell#readme>
 homepage:       https://github.com/cole-k/advent-of-code-2018-haskell#readme
@@ -27,12 +27,12 @@ source-repository head
 
 library
   exposed-modules:
-      Day1
-    , Day2
-    , Day3
-    , Day5
+      Day01
+    , Day02
+    , Day05
+    , Day12
   other-modules:
-      Paths_haskell_aoc
+      Paths_aoc_haskell
   hs-source-dirs:
       src
   build-depends:
@@ -43,29 +43,29 @@ library
     , void
   default-language: Haskell2010
 
-executable advent-of-code-2018-haskell
+executable aoc-haskell
   main-is: Main.hs
   other-modules:
-      Paths_haskell_aoc
+      Paths_aoc_haskell
   hs-source-dirs:
       app
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       base >=4.7 && <5
-    , advent-of-code-2018-haskell
+    , aoc-haskell
     , argparser
     , unordered-containers
   default-language: Haskell2010
 
-test-suite advent-of-code-2018-haskell-test
-  type: exitcode-stdio-1.0
-  main-is: Spec.hs
-  other-modules:
-      Paths_haskell_aoc
-  hs-source-dirs:
-      test
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N
-  build-depends:
-      base >=4.7 && <5
-    , advent-of-code-2018-haskell
-  default-language: Haskell2010
+-- test-suite aoc-haskell-test
+--   type: exitcode-stdio-1.0
+--   main-is: Spec.hs
+--   other-modules:
+--       Paths_haskell_aoc
+--   hs-source-dirs:
+--       test
+--   ghc-options: -threaded -rtsopts -with-rtsopts=-N
+--   build-depends:
+--       base >=4.7 && <5
+--     , aoc-haskell
+--   default-language: Haskell2010

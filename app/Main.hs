@@ -4,18 +4,20 @@ import System.Console.ArgParser
 import Data.HashMap.Strict (HashMap)
 import qualified Data.HashMap.Strict as Map
 
-import qualified Day1
-import qualified Day2
-import qualified Day5
+import qualified Day01
+import qualified Day02
+import qualified Day05
+import qualified Day12
 
 data ParseArgs = ParseArgs Int FilePath
   deriving (Show)
 
 solutions :: HashMap Int (FilePath -> IO ())
 solutions = Map.fromList
-  [ (1, Day1.solve)
-  , (2, Day2.solve)
-  , (5, Day5.solve)]
+  [ ( 1, Day01.solve)
+  , ( 2, Day02.solve)
+  , ( 5, Day05.solve)
+  , (12, Day12.solve)]
 
 argParser :: ParserSpec ParseArgs
 argParser = ParseArgs
